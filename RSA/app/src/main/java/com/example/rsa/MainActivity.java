@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
         genBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int i, p, q, n, on, e, d=0;     // e(public key) & d(private key)
-                int pString = Integer.parseInt(String.valueOf(pText.getText()));
-                int qString = Integer.parseInt(String.valueOf(qText.getText()));
+                int i, n, on, e, d=0;     //  & d(private key)
+                int p = Integer.parseInt(String.valueOf(pText.getText())); // public key exponent
+                int q = Integer.parseInt(String.valueOf(qText.getText())); // private key exponent
                 int msgString = Integer.parseInt(String.valueOf(msgText.getText()));
-                resText.setText(""+pString);
+                resText.setText("");
             }
         });
     }
