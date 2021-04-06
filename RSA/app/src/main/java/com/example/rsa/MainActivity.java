@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
                 int p = Integer.parseInt(String.valueOf(pText.getText()));
                 int q = Integer.parseInt(String.valueOf(qText.getText()));
                 int plainText = Integer.parseInt(String.valueOf(msgText.getText()));
+
+                n = p * q;
+
                 resText.setText("");
             }
         });
