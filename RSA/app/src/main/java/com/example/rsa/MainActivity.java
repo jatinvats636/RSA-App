@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 int p = Integer.parseInt(String.valueOf(pText.getText()));
                 int q = Integer.parseInt(String.valueOf(qText.getText()));
                 int plainText = Integer.parseInt(String.valueOf(msgText.getText()));
-                resText.setText("p : "+p +"\n"+ "q : "+q);
+                resText.setText("p : "+p +"\n"+ "q : "+q +"\n"+ "InMsg : "+plainText);
                 n = p * q;
                 on = (p - 1) * (q - 1);
                 resText.append("\nn : "+n +"\n"+ "ϕ(n) : "+on);
