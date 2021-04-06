@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                 }
-                resText.append("\ne : "+e);
+                resText.append("\n\ne : "+e);
                 for (i = 0; i <= 9; i++) {
                     int x = 1 + (i * on);
                     if (x % e == 0) {
