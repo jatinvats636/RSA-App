@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 resText.setText("p : "+p +"\n"+ "q : "+q +"\n"+ "InMsg : "+plainText);
                 n = p * q;
                 on = (p - 1) * (q - 1);
-                resText.append("\nn : "+n +"\n"+ "ϕ(n) : "+on);
+                resText.append("\n\nn : "+n +"\n"+ "ϕ(n) : "+on);
                 for (e = 2; e < on; e++) {
                     if (gcd(e, on) == 1) {
                         break;
@@ -53,5 +53,12 @@ public class MainActivity extends AppCompatActivity {
                 c = (Math.pow(plainText, e)) % n;
             }
         });
+    }
+    static int gcd(int e, int z)
+    {
+        if (e == 0)
+            return z;
+        else
+            return gcd(z % e, e);
     }
 }
