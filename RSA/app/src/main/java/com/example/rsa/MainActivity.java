@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 resText.append("\nd : "+d);
                 c = (Math.pow(plainText, e)) % n;
+                resText.append("\nEncrypted : "+c);
             }
         });
     }
