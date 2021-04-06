@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
                 on = (p - 1) * (q - 1);
                 resText.append("\nn : "+n +"\n"+ "ϕ(n) : "+on);
 
+                for (e = 2; e < on; e++) {
+                    if (gcd(e, z) == 1) {
+                        break;
+                    }
+                }
             }
         });
     }
