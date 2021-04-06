@@ -8,6 +8,9 @@ import android.widget.Button;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 public class MainActivity extends AppCompatActivity {
 
     TextInputEditText pText, qText, msgText, resText;
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int i, n, on, e, d=0;    //// e(public key exponent) & d(private key exponent)
-                double c;
+                double enc;
                 int p = Integer.parseInt(String.valueOf(pText.getText()));
                 int q = Integer.parseInt(String.valueOf(qText.getText()));
                 int plainText = Integer.parseInt(String.valueOf(msgText.getText()));
@@ -50,8 +53,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 resText.append("\nd : "+d);
-                c = (Math.pow(plainText, e)) % n;
-                resText.append("\nEncrypted : "+c);
+                enc = (Math.pow(plainText, e)) % n;
+                resText.append("\nEncrypted : "+enc);
+                BigInteger N = BigInteger.valueOf(n);
+                BigInteger C = BigDecimal.valueOf(enc).toBigInteger();
+                BigInteger dec = (C.pow(d)).mod(N);
+                resText.append("\nDecrypted : "+dec);
             }
         });
     }
