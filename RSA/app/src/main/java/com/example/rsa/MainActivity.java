@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 n = p * q;
                 on = (p - 1) * (q - 1);
 
-                resText.setText("");
+                resText.append("p : "+p+"\nq : "+q);
             }
         });
     }
