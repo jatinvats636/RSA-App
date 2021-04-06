@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         genBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int i, p, q, n, on, e, d=0;     // e(public key) & d(private key)
                 int pString = Integer.parseInt(String.valueOf(pText.getText()));
                 int qString = Integer.parseInt(String.valueOf(qText.getText()));
                 int msgString = Integer.parseInt(String.valueOf(msgText.getText()));
