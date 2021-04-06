@@ -38,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 resText.append("\nn : "+n +"\n"+ "ϕ(n) : "+on);
 
                 for (e = 2; e < on; e++) {
-                    if (gcd(e, z) == 1) {
+                    if (gcd(e, on) == 1) {
                         break;
                     }
                 }
+                resText.append("\ne : "+e);
             }
         });
     }
