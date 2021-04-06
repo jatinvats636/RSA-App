@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 int plainText = Integer.parseInt(String.valueOf(msgText.getText()));
 
                 n = p * q;
+                on = (p - 1) * (q - 1);
 
                 resText.setText("");
             }
