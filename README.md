@@ -1,2 +1,2 @@
 # RSA-App
-An android app to implement the working of RSA algorithm, which is asymmetric cryptography algorithm.
+An android app to implement encryption & decryption using RSA algorithm, which is asymmetric cryptography algorithm.
